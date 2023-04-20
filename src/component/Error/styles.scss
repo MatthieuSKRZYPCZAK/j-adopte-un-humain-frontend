@@ -1,0 +1,23 @@
+@use 'src/styles/vars' as v ;
+@import 'src/styles/vars';
+
+.error404{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    &--back{
+        @include button;
+        display: inline-block;
+        margin: 40px auto;
+        span{
+            display: inline-block;
+        }
+    }
+
+    &--player{
+        height: 70vh;
+    }
+}

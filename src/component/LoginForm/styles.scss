@@ -1,0 +1,71 @@
+@use 'src/styles/vars' as v;
+@import 'src/styles/vars';
+
+.title {
+  @include Title;
+}
+
+.login {
+  @include smallTitle;
+}
+
+.form {
+  height: 85vh;
+  width: 90vw;
+
+  p{
+    text-align: center;
+    margin-top: 5vh;
+
+    .link{
+      font-weight: 700;
+      margin:auto;
+    }
+  }
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10vh;
+
+
+  &--boutton{
+    @include button;
+    margin: auto;
+    width: 6em;
+  }
+
+  &--message{
+
+    display: inline-block;
+    background-color: v.$primary-color;
+    padding: 10px;
+    margin: 5vh 40vw;
+    display: flex;
+    align-items: center;
+
+    &-cross{
+      color: v.$black;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover{
+          color: v.$white;
+      }
+    }
+  }
+
+  &--input{
+    padding: 20rem auto;
+    border-image-source: linear-gradient(-140deg, v.$primary-color, v.$tertiary-color);
+    border-width: 3px;
+    border-image-slice: 1;
+    transition: 0.2s;
+
+    &:focus{
+        border-image-source: linear-gradient(-140deg, v.$dark-color, v.$secondary-color);
+    }
+
+}
+}
