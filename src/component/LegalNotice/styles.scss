@@ -1,0 +1,96 @@
+@use 'src/styles/vars' as v ;
+@import 'src/styles/vars';
+
+.container{
+    margin-top: 10vh ;
+    padding-bottom: 10vh;    
+    min-height: 76vh;
+
+
+    &--top-part{
+        width: 70vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+
+        &--button{
+            @include button;
+            margin: 60px auto ;
+            font-weight: 700;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        h2{
+            display: inline-block;
+            margin: auto;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            font-family: 'Arapey';
+            font-weight: 700;
+            background:
+                linear-gradient(
+                    to right,
+                    v.$tertiary-color,
+                    v.$dark-color
+
+                );
+            background-size: 97% 5px, 0 10px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+        }
+        p{
+            font-family: 'Alice';
+            font-size: 1.1em;
+            text-align: justify;
+        }
+
+
+    }
+
+
+    }
+
+
+
+@media (max-width: $small-screen) {
+    .container{
+        margin-top: 2vh;
+        &--top-part{
+            flex-direction: column-reverse;
+        }
+
+        &--animal_profiles{
+
+            &--image{
+
+                width: 50vw;
+                height: 50vw;
+            }
+
+        }
+
+        .profiles{
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+
+        &--concept{
+            padding-top: 5vh;
+            flex-direction: column;
+            gap: 60px;
+            div{
+                width: 85%;
+                margin: auto;
+            }
+        }
+    }
+  }

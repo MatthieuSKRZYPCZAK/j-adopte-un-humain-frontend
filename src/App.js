@@ -23,6 +23,7 @@ import Error from './component/Error';
 import Filtres from './component/Filtres';
 import PatchAnimal from './component/Animals/PatchAnimal';
 import Favorites from './component/Favorites';
+import LegalNotice from './component/LegalNotice';
 
 const baseUrl=process.env.REACT_APP_BASE_URL;
 const token = localStorage.getItem('token');
@@ -90,6 +91,7 @@ function App() {
         <Route path='/animals/patchanimal/:id' element={<PatchAnimal user={user} isLogged={isLogged}/>} />
         <Route path='/adoptions' element={<Adoptions user={user} isLogged={isLogged}/>} />
         <Route path='/adoptions/:id' element={<AdoptionsDetail user={user} isLogged={isLogged}/>} />
+        <Route path='/notice' element={<LegalNotice />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer/>
