@@ -2,9 +2,6 @@
 
 import React from 'react';
 import './styles.scss';
-// import Licorne from '../../assets/Licorne.png';
-// import Dinosaure from '../../assets/Dinosaure.png';
-// import Dragon from '../../assets/Dragon.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -33,6 +30,11 @@ const SigninForm = () => {
     setConfirmPassword(event.target.value);
   };
 
+
+  const msgError = async () => {
+    alert('Formulaire désactivé')
+    return
+  }
 
 
   const handleSubmit = async (event) => {
@@ -79,11 +81,13 @@ const SigninForm = () => {
       {message != '' &&
         <p>{message}</p>
       }
+      <p>"Le formulaire d'inscription est désactivé"</p>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="E-mail" name="email" value={email} onChange={handleEmailSubmit} />
         <input type="password" placeholder="Mot de passe" name="password" value={password} onChange={handlePasswordSubmit} />
         <input type="password" placeholder="Confirmation mot de passe" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPasswordSubmit} />
-        <p className='validation' onClick={handleSubmit}><span>Valider</span></p>
+        <p className='validation' onClick={msgError}><span>Valider</span></p>
+        {/*<p className='validation' onClick={handleSubmit}><span>Valider</span></p> */}
       </form>
     </div>
   )
