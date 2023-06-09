@@ -27,11 +27,12 @@ const Home = () => {
     return(
 
         <div className='container'>
-             <div className='container--top-part'>
+            <div className='container--top-part'>
                 <div>
                     <h1>J'adopte un humain</h1>
                     <p>Rencontrez votre nouveau meilleur ami sur J'adopte un humain, où les animaux et les humains se rencontrent pour une vie remplie d'amour et de bonheur.</p>
-                    <div className='container--top-part--button'><span><Link to='/signin'>Nous rejoindre</Link></span></div>
+                    <div className='container--top-part--button'><span><Link to='/login'>Connexion</Link></span></div>
+                    <p style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>Veuillez noter que le site est purement fictif et a été créé dans le cadre d'un projet de fin de formation.</p>
 
                 </div>
                 <Player

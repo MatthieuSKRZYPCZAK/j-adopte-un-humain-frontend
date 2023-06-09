@@ -47,6 +47,8 @@ const LoginForm = ({setUser, setIsLogged}) => {
     return (
       <div className="input-container">
         <h1 className='login'>Connexion</h1>
+        <p>login : john@john.fr</p>
+        <p>password : john-test</p>
         <div className='form'>
            {login !== '' &&
             <p className='input-container--message'>{login} <RxCrossCircled className='input-container--message-cross' size='20px' onClick={e => setLogin('')}/></p>

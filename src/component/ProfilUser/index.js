@@ -177,7 +177,7 @@ const [form, setForm] = useState({
                         <p className='center'> {profilUSer.postal_code} {profilUSer.city}</p>
                         <p className='center'> {profilUSer.country}</p>
 
-                        <p className='profil-user__delete' onClick={e=> setShowModal(true)}><HiTrash size={'30px'}/>Supprimer mon profil</p>
+                        {/* <p className='profil-user__delete' onClick={e=> setShowModal(true)}><HiTrash size={'30px'}/>Supprimer mon profil</p>
                         {showModal && 
                             <div className="profil-user__modal">
                                 <div className="profil-user__modal--color">
@@ -186,7 +186,7 @@ const [form, setForm] = useState({
                                     <p className="profil-user__modal--boutton" onClick={e=> setShowModal(!showModal)}><span>Non</span></p>
                                 </div>
                             </div>
-                        }
+                        } */}
                     </>
                    } 
                 </div>
@@ -235,7 +235,7 @@ const [form, setForm] = useState({
                         <input className='profil-user__form--input' value={form.confirm_new_password} name='confirm_new_password' placeholder='Confirmation' type='password' onChange={handleFormChange}/>
                         <label className='profil-user__form--label' htmlFor='confirm_new_password'>Confirmation</label>
 
-                        <button  onClick={handleSubmit} className='profil-user__form--button'><span>Valider</span></button>
+                        {/* <button  onClick={handleSubmit} className='profil-user__form--button'><span>Valider</span></button> */}
                     </form>
                     </div>
                     <div className='profil-user__tips'>
